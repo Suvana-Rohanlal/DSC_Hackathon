@@ -44,4 +44,8 @@ Business (
       return this.contact;
     }
 
+    String getImage() {
+      
+    }
+
 }
