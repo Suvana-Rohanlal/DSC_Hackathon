@@ -1,0 +1,43 @@
+Api deliverables:
+
+USERS:
+	url: "https://crudcrud.com/api/2704cb98a06d4cf9ba99fb28d1108457/users"
+
+POST User
+	username, 
+	password,
+	type (*),
+	email
+
+*type : 0 - Admin
+		1 - Business
+		2 - User
+	
+GET Users
+	returns all users
+
+PATCH User
+	edit details
+
+BUSINESS:
+	url: "https://crudcrud.com/api/2704cb98a06d4cf9ba99fb28d1108457/business"
+
+POST Business
+	name,
+	location,
+	about,
+	contact,
+	tag,
+	website,
+ 	owner(*)
+
+*owner refers to the user who created the business.
+
+GET Business
+	returns all businesses 
+
+PATCH Business
+	Spesify what you want to add/edit eg. 
+	["name"] = "something else", this will overwrite the current name to "something else"
+
+
