@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>XhasaSmall</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      </head>
+      <body background="{{ url_for('static', filename='background.jpg') }}" >
+        <header>
+            <img src="{{url_for('static', filename='logo.png')}}" align="left" style="width:180px;height:80px" />
+            <img src="{{url_for('static', filename='icon.png')}}" align="right" style="width:80px;height:80px;padding: 10px;" />
+
+          </header>
+      
+          <p>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('register') }}">Register a business</a>
+            <a href="{{ url_for('search') }}"><b>Update Profile</b></a>
+          </p>
+          
+          <h2>Add new product</h2>
+          <h2></h2>
+        </body>>
+
+</html>

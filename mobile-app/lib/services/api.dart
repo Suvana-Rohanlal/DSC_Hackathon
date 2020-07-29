@@ -1,6 +1,7 @@
 import 'dart:convert' show JsonEncoder, json;
+
+import '../models/business.dart';
 import 'package:http/http.dart';
-import 'package:xhasasmall/models/business.dart';
 
 
 
