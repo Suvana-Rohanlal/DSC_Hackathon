@@ -45,7 +45,7 @@ Business (
     }
 
     String getImage() {
-      
+      return '';
     }
 
 }

@@ -97,9 +97,6 @@ Future <bool> login(String usr, String psw) async{
   String endpoint = "/users";
   String _url = url + endpoint;
   
-  ///////////////////////
-  String _uid = "5f2067a19a729803e8b2c276"; 
-  ///////////////////////
   
   final response = await get(_url, headers: <String, String> {
     'Content-Type': 'application/json; charset=UTF-8',

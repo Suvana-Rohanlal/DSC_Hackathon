@@ -2,7 +2,6 @@ import 'package:XhasaSmall/models/business.dart';
 import 'package:XhasaSmall/screens/postpage.dart';
 import 'package:XhasaSmall/services/api.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 
 class Home extends StatelessWidget{
   @override
