@@ -14,9 +14,14 @@ class Home extends StatelessWidget{
             unselectedWidgetColor:Colors.white
                 
             ),
-            home: UserHomePage(),
-            );
+            home: Container(
+            
+            
+            child:UserHomePage()
+          ),
+        );
           }
+          
   }
 
 class UserHomePage extends StatefulWidget {
@@ -29,7 +34,7 @@ class _UserHomePageState extends State<UserHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      
       body: _Home(),
       appBar:AppBar(
         backgroundColor: Colors.white,
@@ -73,6 +78,20 @@ void refresh() {
         @override
         Widget build(BuildContext context) {
           return Container(
+            
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(
+                        "assets/images/background.jpg"
+                    ),
+
+                    fit: BoxFit.cover
+                )
+            ),
+            
+          
       child: 
           Row(
             children: <Widget>[
@@ -93,16 +112,16 @@ void refresh() {
                      
                       return Flexible(
                         child: Container(
-                          color: Colors.white,
+                          color: Colors.transparent,
                          
-                          child: ListView.builder(
+                          child: GridView.builder(
+                            gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2),
+                            scrollDirection: Axis.vertical,
+                            shrinkWrap: true,
                             itemCount: posts.length,
                             itemBuilder: (context, i) {
-                              return Container(
-                                width: 132,
-                                height: 132,
-                                padding: const EdgeInsets.fromLTRB(6, 6, 6, 0),
-                                child: InkWell(
+                              return InkWell(
                                   onTap: () {
                                     Navigator.of(context).push(
                                       MaterialPageRoute(
@@ -115,8 +134,8 @@ void refresh() {
                                   child: PostCard(
                                     post: posts[i],
                                   ),
-                                ),
-                              );
+                                );
+                              
                             }
                           ),
                         ),
@@ -127,7 +146,7 @@ void refresh() {
                       child: Center(
                         child: Icon(
                           Icons.error,
-                          color: Colors.white,
+                          color: Colors.black,
                           size: 50,
                         )
                       )
@@ -159,10 +178,71 @@ class _PostCardState extends State<PostCard> {
   Widget build(BuildContext context) {
 
     return Container(
-      width: 132,
-      height: 132,
-      padding: EdgeInsets.all(20),
-      color: Colors.grey,
+      padding: EdgeInsets.fromLTRB(10,10,10,0),
+      height: 223,
+      width: double.maxFinite,
+      child: Card(
+        shadowColor: Color.fromRGBO(192,192,192, 0.9),
+        color: Color.fromRGBO(195,195,195, 1),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        elevation: 6,
+        child: Container(
+          child: Column(
+            children: [
+              Container(
+                height: 135,
+                color: Colors.white,
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 7.5),
+                      
+                      
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                        image: DecorationImage(
+                          fit: BoxFit.contain,
+                          image:NetworkImage(widget.post.getImage2()),
+
+                        )
+                      )
+                      
+                    
+                    ),
+                    
+                    
+                
+                  ],
+
+                ),
+              ),
+              SizedBox(
+                        height:7,
+                      ),
+              //photo and then tag
+              Align(
+                child: Container(
+                  height: 38,
+                  padding: EdgeInsets.symmetric(horizontal: 2, vertical: 2),
+                  child: Text(widget.post.getName(), textAlign: TextAlign.center ,style: TextStyle(
+                    
+                  ),),
+              ),
+              ),
+            ]
+          )
+        ),
+        
+      ),
+    );
+         
+       
+    
+      /*
+      color: Colors.black,
       child: Column(
         children: <Widget>[
           Container(
@@ -177,8 +257,8 @@ class _PostCardState extends State<PostCard> {
           
           
         ],
-      ),
-    );    
+      ),*/
+       
 
   }
 }
