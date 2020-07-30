@@ -4,43 +4,59 @@
         <title>XhasaSmall</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-          
+
       </head>
-      <body background="{{ url_for('static', filename='background.jpg') }}" >
-        <header>
-          <img src="{{url_for('static', filename='logo.png')}}" align="left" style="width:180px;height:80px" />
-          <img src="{{url_for('static', filename='icon.png')}}" align="right" style="width:80px;height:80px;padding: 10px;" />
-        </header>
-      
+      <body background="{{ url_for('static', filename='background.PNG') }}" >
+
+
+          <header>
+            <img src="{{url_for('static', filename='logo.png')}}" align="left" style="width:180px;height:80px" />
+
+            <span class="d-flex justify-content-end">
+              <div class="d-inline">
+                <a href="{{ url_for('login') }}" style ="margin-top:10px; margin-right: 20px">
+                <button class= "d-inline btn btn-success" type="button" >Login</button>
+                </a>
+              </div>
+
+              <div class="d-inline">
+                <img class= "d-inline" src="{{url_for('static', filename='icon.png')}}" style="width:80px;height:80px;padding: 10px;" />
+
+              </div>
+            </span>
+
+          </header>
+
+
           <p>
             <a href="{{ url_for('home') }}">Home</a>
             <a href="{{ url_for('about') }}"><b>About</b></a>
             <a href="{{ url_for('register') }}">Register a business</a>
             <a href="{{ url_for('search') }}">Update Profile</a>
           </p>
-          
+
         <h2>Background Story</h2>
         <div class="container">
           <p>
-          Small businesses have always had a tough time reaching customers, as they have to compete with 
-          already established businesses, whose services and products are already trusted by customers. 
-          </p>
-          <p> 
-          These large established businesses are also easy to locate due to the extensive marketing budget that they have. 
-          This makes it harder for smaller businesses to compete with them because most people are not aware that these 
-          small businesses exist. 
+          Small businesses have always had a tough time reaching customers, as they have to compete with
+          already established businesses, whose services and products are already trusted by customers.
           </p>
           <p>
-          Small businesses and street vendors are losing sales due to covid. They were forced to close their doors 
-          during the initial 21 day lockdown, which was later extended. Even when certain small businesses were 
-          allowed to operate under being classified as an essential service. Most consumers carried on supporting 
-          larger businesses because they were easier to locate and could much easily enforce social distancing 
-          measures and give out sanitisers due to their pre existing capital and large store/shop space. Consumers are afraid 
+          These large established businesses are also easy to locate due to the extensive marketing budget that they have.
+          This makes it harder for smaller businesses to compete with them because most people are not aware that these
+          small businesses exist.
+          </p>
+          <p>
+          Small businesses and street vendors are losing sales due to covid. They were forced to close their doors
+          during the initial 21 day lockdown, which was later extended. Even when certain small businesses were
+          allowed to operate under being classified as an essential service. Most consumers carried on supporting
+          larger businesses because they were easier to locate and could much easily enforce social distancing
+          measures and give out sanitisers due to their pre existing capital and large store/shop space. Consumers are afraid
           of visiting small businesses because of overcrowding as they much often have smaller store/shop space.
         </p>
         <p>
-          These small businesses usually provide the same services/products that large businesses do, but often only gain access 
-          to a small market share. As most customers are not aware of the services that they offer, and thus miss out on the 
+          These small businesses usually provide the same services/products that large businesses do, but often only gain access
+          to a small market share. As most customers are not aware of the services that they offer, and thus miss out on the
           benefit of acquiring these services/products at a reduced cost.
 
         </p>
@@ -48,9 +64,9 @@
 
         <h2>Sponsors</h2>
         <div class="imageDiv">
-          <img src="{{url_for('static', filename='0.jpeg')}}" align="left" style="width:180px;height:180px;padding: 10px;" />
-          <img src="{{url_for('static', filename='yoco.png')}}" align="left" style="width:180px;height:180px;padding: 10px;" />
-          <img src="{{url_for('static', filename='dev.jpg')}}" align="left" style="width:180px;height:180px;padding: 10px;" />
+          <img src="{{url_for('static', filename='0.jpeg')}}" align="center" style="width:200px;height:200px;padding: 10px;" />
+          <img src="{{url_for('static', filename='yoco.png')}}" align="center" style="width:200px;height:200px;padding: 10px;" />
+          <img src="{{url_for('static', filename='dev.jpg')}}" align="center" style="width:200px;height:200px;padding: 10px;" />
         </div>
         </body>
 

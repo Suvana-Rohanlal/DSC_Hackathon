@@ -4,30 +4,43 @@
             <title>XhasaSmall</title>
             <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
           </head>
-          <body background="{{ url_for('static', filename='background.jpg') }}" >
+          <body background="{{ url_for('static', filename='background.PNG') }}">
             <header>
               <img src="{{url_for('static', filename='logo.png')}}" align="left" style="width:180px;height:80px" />
-              <img src="{{url_for('static', filename='icon.png')}}" align="right" style="width:80px;height:80px;padding: 10px;" />
+
+              <span class="d-flex justify-content-end">
+                <div class="d-inline">
+                  <a href="{{ url_for('login') }}" style ="margin-top:10px; margin-right: 20px">
+                  <button class= "d-inline btn btn-success" type="button" >Login</button>
+                  </a>
+                </div>
+
+                <div class="d-inline">
+                  <img class= "d-inline" src="{{url_for('static', filename='icon.png')}}" style="width:80px;height:80px;padding: 10px;" />
+
+                </div>
+              </span>
+
             </header>
-          
+
               <p>
                 <a href="{{ url_for('home') }}"><b>Home</b></a>
                 <a href="{{ url_for('about') }}">About</a>
                 <a href="{{ url_for('register') }}">Register a business</a>
                 <a href="{{ url_for('search') }}">Update Profile</a>
               </p>
-              
-			<div class="container">              
-			<h2>What is XhasaSmall?</h2>
-              
+
+              <h2>What is XhasaSmall?</h2>
+              <div class="container">
               <p>
-                XhasaSmall was established in order to help small businesses effectively compete with larger well-established 
-                businesses. We provide small businesses access to a wide range of users who use our platform to search for 
-                whatever product/services they need. We support small businesses by ensuring that all the products/services on 
+                XhasaSmall was established in order to help small businesses effectively compete with larger well-established
+                businesses. We provide small businesses access to a wide range of users who use our platform to search for
+                whatever product/services they need. We support small businesses by ensuring that all the products/services on
                 our platform are strictly provided by small businesses.
               </p>
-              
+              </div>
               <h2>Our Vision</h2>
               <div>
               <p>
@@ -35,7 +48,13 @@
               </p>
               </div>
               <h2>The Team</h2>
-			</div>
+              <div class="imageDiv">
+                <img src="{{url_for('static', filename='ronaldo.jpeg')}}" align="center" style="width:200px;height:200px;padding: 10px;" />
+                <img src="{{url_for('static', filename='merriam.jpeg')}}" align="center" style="width:200px;height:200px;padding: 10px;" />
+                <img src="{{url_for('static', filename='suvana.jpeg')}}" align="center" style="width:200px;height:200px;padding: 10px;" />
+                <img src="{{url_for('static', filename='Nkanyiso.jpeg')}}" align="center" style="width:200px;height:200px;padding: 10px;" />
+
+              </div>
             </body>
 
     </html>

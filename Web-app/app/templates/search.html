@@ -3,21 +3,23 @@
     <head>
         <title>XhasaSmall</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
       </head>
-      <body background="{{ url_for('static', filename='background.jpg') }}" >
+      <body background="{{ url_for('static', filename='background.PNG') }}" >
         <header>
             <img src="{{url_for('static', filename='logo.png')}}" align="left" style="width:180px;height:80px" />
             <img src="{{url_for('static', filename='icon.png')}}" align="right" style="width:80px;height:80px;padding: 10px;" />
-
+            
           </header>
-      
+
           <p>
             <a href="{{ url_for('home') }}">Home</a>
             <a href="{{ url_for('about') }}">About</a>
             <a href="{{ url_for('register') }}">Register a business</a>
             <a href="{{ url_for('search') }}"><b>Update Profile</b></a>
           </p>
-          
+
           <h2>Add new product</h2>
           <h2></h2>
         </body>>

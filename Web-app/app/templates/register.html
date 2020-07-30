@@ -1,7 +1,55 @@
-<!DOCTYPE html>
-    <html>
-    <body>
-    <h1>My Personal Website</h1>
-    <p>register.</p>
-    </body>
+
+       <!DOCTYPE html> <html>
+        <head>
+            <title>XhasaSmall</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')
+            }}">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+          </head>
+          <body background="{{ url_for('static', filename='background.PNG') }}" >
+            <header>
+              <img src="{{url_for('static', filename='logo.png')}}" align="left" style="width:180px;height:80px" />
+            
+              <img src="{{url_for('static', filename='icon.png')}}" align="right" style="width:80px;height:80px;padding: 10px;" />
+
+            </header>
+
+              <p>
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('register') }}"><b>Register a
+                business</b></a>
+                <a href="{{ url_for('search') }}">Update Profile</a>
+              </p>
+
+              <div class="container" style="padding-top: 40px;">
+              <form action = "http://localhost:5000/register" method = "post">
+                <p>
+                <p>Name of Business:
+                <input type = "text"/></p>
+                <p>Category:
+                <input type="checkbox" id="tag1" name="tag1">
+                <label for="tag1"> Retail</label>
+                <input type="checkbox" id="tag2" name="tag2">
+                <label for="tag2"> Services</label>
+                <input type="checkbox" id="tag3" name="tag3">
+                <label for="tag3"> Restaurant</label>
+                <input type="checkbox" id="tag4" name="tag4">
+                <label for="tag4"> Other</label>
+                </p>
+                <p>About:
+                <input type = "text" /></p>
+                <p><label for="myfile">Image:</label>
+                <input type="file" id="myfile" name="myfile"></p>
+                <p>Location:
+                <input type = "text"/></p>
+                <p>Email Address:
+                <input type = "email" /></p>
+                </p>
+                <p><input type = "submit" value = "Register" /></p>
+              <form>
+              </div>
+            </body>
+
     </html>
