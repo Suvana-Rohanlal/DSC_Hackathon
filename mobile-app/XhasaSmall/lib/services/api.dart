@@ -42,8 +42,7 @@ Business jsonToBus(var dict){
   String tempContact = dict["contact"];
   String tempTag = dict["tag"];
   String tempOwner = dict["owner"];
-  String url = dict["url"] ?? " ";
-  List <dynamic> tempProducts = dict["products"];
+
 
 
   return new Business(
@@ -52,8 +51,6 @@ Business jsonToBus(var dict){
     contact: tempContact, 
     tag: tempTag, 
     owner: tempOwner,
-    products: tempProducts,
-    url: url,
     );
 
 }

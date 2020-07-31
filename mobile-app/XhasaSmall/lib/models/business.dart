@@ -4,8 +4,6 @@ class Business{
   String contact;
   String tag;
   String owner; 
-  List <String> products;
-  String url;
 
 
 Business (
@@ -15,8 +13,6 @@ Business (
     String contact,
     String tag, 
     String owner,
-    List <String> products,
-    String url,
     }
     )
 
@@ -26,8 +22,7 @@ Business (
       this.contact = contact;
       this.tag = tag;
       this.owner = owner;
-      this.products = products;
-      this.url = url ?? " ";
+
     }
 
     String getName(){
