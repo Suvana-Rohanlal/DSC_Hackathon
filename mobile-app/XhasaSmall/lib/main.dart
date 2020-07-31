@@ -1,4 +1,5 @@
 
+import 'package:XhasaSmall/Authentication/SignIn.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/wrapper.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         accentColor: Colors.white,
       ),
-      home: RootPage(),
+      home: SignIn(),
       
     );
   }

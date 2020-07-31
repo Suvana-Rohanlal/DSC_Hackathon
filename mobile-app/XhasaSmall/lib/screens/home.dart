@@ -1,13 +1,17 @@
 import 'package:XhasaSmall/models/business.dart';
+import 'package:XhasaSmall/screens/Category.dart';
 import 'package:XhasaSmall/screens/postpage.dart';
 import 'package:XhasaSmall/services/api.dart';
 import 'package:flutter/material.dart';
+
+import 'package:XhasaSmall/screens/BusinessDetail.dart';
 
 class Home extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
    
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
             accentColor: Colors.white,
             // the color of the logo
@@ -30,14 +34,47 @@ class UserHomePage extends StatefulWidget {
 }
 
 class _UserHomePageState extends State<UserHomePage> {
-
+  Business businesses; 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       
       body: _Home(),
+      drawer: Container(
+              margin: EdgeInsets.only(right: 100),
+              color: Colors.white,
+              
+              child: ListView(
+                children: <Widget>[
+                  Container(
+                    height: 100,
+                    child: UserAccountsDrawerHeader(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[400],
+                      ),
+                      accountName: Padding(
+                        padding: const EdgeInsets.only(bottom: 12),
+                        child: Text(getUsername(), style: TextStyle(),),
+                      ),
+                      accountEmail: Text(getEmail()),
+//
+                    ),
+                  ),
+//                  Divider(
+//                    color:Colors.black,
+//                  )S
+                  
+                
+
+                 
+
+                ],
+              ),
+            ),
+            
       appBar:AppBar(
         backgroundColor: Colors.white,
+        iconTheme: new IconThemeData(color: Colors.lightBlueAccent),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -125,10 +162,9 @@ void refresh() {
                                   onTap: () {
                                     Navigator.of(context).push(
                                       MaterialPageRoute(
-                                              builder: (context) => PostPage(
-                                                post: posts[i],
-                                              ),
-                                      )
+                                              builder: (context) => BusinessDetail(business: posts[i],))
+                                              
+                                    
                                     );
                                   },
                                   child: PostCard(

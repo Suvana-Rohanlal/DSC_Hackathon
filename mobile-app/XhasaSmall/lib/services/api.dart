@@ -105,7 +105,7 @@ Future <bool> login(String usr, String psw) async{
   List<dynamic> temp = json.decode(response.body);
   
   for (int i = 0; i < temp.length; i++) {
-    if (temp[i]['username'] == usr) {
+    if (temp[i]['email'] == usr) {
       if (temp[i]['password'] == psw) {
         print("TRUE");
         return true;
@@ -113,4 +113,12 @@ Future <bool> login(String usr, String psw) async{
     } 
   }
   return false;
+}
+
+String getUsername(){
+
+return "BigMan" ;
+}
+String getEmail() {
+  return "bm@fakemail.com";
 }
